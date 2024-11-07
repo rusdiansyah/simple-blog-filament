@@ -20,7 +20,7 @@ class CategoryIndex extends Component
             $q->where('slug',$slug);
         })
         ->orderBy('id','desc')
-        ->get();
+        ->paginate(9);
         return view('livewire.category-index',[
             'category' => $category,
             'posts' => $posts,
