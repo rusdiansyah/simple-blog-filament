@@ -8,6 +8,9 @@
             <div class="container" data-aos="fade-up">
                 <div class="row g-5">
                     <div class="col-lg-4">
+                        @if (!$newOne)
+                            <h1>Belum ada Isi</h1>
+                        @endif
 
                         <div class="post-entry lg">
                             <a href="{{ url('post/' . $newOne->slug) }}"><img
